@@ -33,7 +33,7 @@ public class Implementa {
 		
 		
 		Libro libro1 = new Libro(11,"Matalache","Alvaro Vargas Llosa",50f,300,123);
-		Libro libro2= new Libro(12,"100 años de soledad", "Mario Vargas Ll.",120,500,123);
+		Libro libro2= new Libro(12,"100 aÃ±os de soledad", "Mario Vargas Ll.",120,500,123);
 		
 		System.out.println(libro1);
 		System.out.println(libro2);
@@ -111,9 +111,9 @@ public class Implementa {
 		System.out.println("Lista de Libros");
 		Libro lib1 = new Libro(11,"Matalache","Alvaro Vargas Llosa",50f,300,123);
 		Libro lib2 = new Libro(11,"Matalache","Alvaro Vargas Llosa",50f,300,123);
-		Libro lib3 = new Libro(12,"100 años de soledad", "Mario Vargas Ll.",120,500,123);
-		Libro lib4 = new Libro(12,"100 años de soledad", "Mario Vargas Ll.",120,500,123);
-		Libro lib5 = new Libro(12,"100 años de soledad", "Mario Vargas Ll.",120,500,123);
+		Libro lib3 = new Libro(12,"100 aÃ±os de soledad", "Mario Vargas Ll.",120,500,123);
+		Libro lib4 = new Libro(12,"100 aÃ±os de soledad", "Mario Vargas Ll.",120,500,123);
+		Libro lib5 = new Libro(12,"100 aÃ±os de soledad", "Mario Vargas Ll.",120,500,123);
 		
 		Set <Libro> libros = new HashSet<Libro>();
 		
@@ -123,9 +123,17 @@ public class Implementa {
 		libros.add(lib4);
 		libros.add(lib5);
 		
+		byte contador=0;
+		float preciototal=0f;
+		
 		for (Libro libro : libros) {
 			System.out.println(libro.id + " " + libro.titulo + " " + libro.autor +" "+ libro.precio +" "+ libro.nropagina+" "+ libro.nroisbn);
+			contador++;
+			preciototal = preciototal + libro.precio;
+			
 		}
+		System.out.println("Lbros prestados" + contador);
+		System.out.println("Monto auctualizado" + preciototal);
 	}
 
 }
